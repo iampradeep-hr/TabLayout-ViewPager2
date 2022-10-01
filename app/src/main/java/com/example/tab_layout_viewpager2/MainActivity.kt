@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        //data coming from repo
         val images= listOf<Int>(
             R.drawable.ferrari_f1_imola_2022,
             R.drawable.car5,
@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
             R.drawable.image33,
             R.drawable.wallpapers,
             R.drawable.image22,
-
         )
+        //setting the adapter for ViewPager2
         val adapter=ViewPagerAdapter(images)
         viewpager2.adapter=adapter
 
@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 Toast.makeText(this@MainActivity, "Re-Selected", Toast.LENGTH_SHORT).show()
             }
-
         })
 
     }
